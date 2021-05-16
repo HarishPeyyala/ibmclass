@@ -1,0 +1,714 @@
+Day 1
+
+IIB versions
+MSQI
+WMB 6 7 8-->
+IIB 9 10
+App connect 11
+
+What is IIB?
+IBM Integration Bus helps enterprises to connect different types of applications (by defining message flows between them). For instance, IIB can be used to integrate all the internal and external applications
+
+
+Required softwares:
+IIB (toolkit --Development
+     console --Admin)
+MQ 
+Soap UI -->https://www.soapui.org/downloads/latest-release/
+Rfhutils
+Postman  -->https://www.postman.com/downloads/
+MSSQL Database
+MSSQL Mangement studio
+Oracle Database
+Oracle Sql developer
+notepad++ -->https://en.softonic.com/download/notepad-plus/windows/post-download
+
+Messaging formats:
+Json-->Watch What is Json videos in youtube
+XML-->Watch What is XML videos in youtube
+Soap-->Watch What is XML videos in youtube
+
+
+{
+"pan":"ZXCV123445",
+"Aadhaar":"111122223333",
+"mobilenumber":"9999999999"
+}
+Jsonlint website online to verify json
+{
+	"AccountDetails": {
+		"PersonalDetails": {
+			"name": "naresh",
+			"mobilenumber": "9999999999",
+			"DOB": "25-11-1999"
+		},
+		"IdProofs": {
+			"pan": "ZXCV123445",
+			"Aadhaar": "111122223333"
+		},
+		"AddressDetails": {
+			"HNo": "3-300",
+			"addressline1": "suraram col",
+			"pincode": "500055"
+		}
+	}
+}
+
+
+
+parameters,tags,elements
+
+<AccountDeatils>
+<pan>ZXCV123445</pan>
+<Aadhaar>111122223333</Aadhaar>
+<mobilenumber>9999999999</mobilenumber>
+</AccountDeatils>
+
+AccountDeatils-->parent element
+pan-->child elements
+
+   <AccountDetails>
+      <AddressDetails>
+         <HNo>3-300</HNo>
+         <addressline1>suraram col</addressline1>
+         <pincode>500055</pincode>
+      </AddressDetails>
+      <IdProofs>
+         <Aadhaar>111122223333</Aadhaar>
+         <pan>ZXCV123445</pan>
+      </IdProofs>
+      <PersonalDetails>
+         <DOB>25-11-1999</DOB>
+         <mobilenumber>9999999999</mobilenumber>
+         <name>naresh</name>
+      </PersonalDetails>
+   </AccountDetails>
+==========================================================================
+Day2
+Soap
+https://www.tutorialspoint.com/soap/soap_message_structure.htm
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV = "http://www.w3.org/2001/12/soap-envelope" 
+   SOAP-ENV:encodingStyle = "http://www.w3.org/2001/12/soap-encoding">
+
+   <SOAP-ENV:Header>
+      ...
+      ...
+   </SOAP-ENV:Header>
+   <SOAP-ENV:Body>
+      ...
+      ...
+      <SOAP-ENV:Fault>
+         ...
+         ...
+      </SOAP-ENV:Fault>
+      ...
+   </SOAP-ENV:Body>
+</SOAP_ENV:Envelope>
+
+
+Example:
+<SOAP-ENV:Envelope xmlns:SOAP-ENV = "http://www.w3.org/2001/12/soap-envelope" 
+   SOAP-ENV:encodingStyle = "http://www.w3.org/2001/12/soap-encoding">
+
+   <SOAP-ENV:Header>     
+   </SOAP-ENV:Header>
+   <SOAP-ENV:Body>
+      <SOAP-ENV:pan>ZXCV123445</SOAP-ENV:pan>
+   </SOAP-ENV:Body>
+</SOAP_ENV:Envelope>
+
+
+IBM Knowledge center 
+https://www.ibm.com/support/knowledgecenter/en/SSMKHH_10.0.0/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.html
+
+
+Application Development perspective
+Administration perspective
+Integration Development perspective
+Debug Perspective
+Java perspective
+
+=========02-04-2021 class=================
+Addition subtraction tasks in xml json
+=========03-04-2021 class=================
+
+We can create multiple message flows in a single application
+cast function
+HTTP get method & post method difference
+Export & Import Applications
+
+Task 1 get method
+
+
+{
+	"AccountDetails": {
+		"PersonalDetails": {
+			"name": "naresh",
+			"mobilenumber": "9999999999",
+			"DOB": "25-11-1999"
+		},
+		"IdProofs": {
+			"pan": "ZXCV123445",
+			"Aadhaar": "111122223333"
+		},
+		"AddressDetails": {
+			"HNo": "3-300",
+			"addressline1": "suraram col",
+			"pincode": "500055"
+		}
+	}
+}
+
+Task 2 get method
+<AccountDetails>
+      <AddressDetails>
+         <HNo>3-300</HNo>
+         <addressline1>suraram col</addressline1>
+         <pincode>500055</pincode>
+      </AddressDetails>
+      <IdProofs>
+         <Aadhaar>111122223333</Aadhaar>
+         <pan>ZXCV123445</pan>
+      </IdProofs>
+      <PersonalDetails>
+         <DOB>25-11-1999</DOB>
+         <mobilenumber>9999999999</mobilenumber>
+         <name>naresh</name>
+      </PersonalDetails>
+   </AccountDetails>
+=========================08-04-2021===========================
+https://www.ibm.com/docs/en/integration-bus/10.0?topic=operators-esql-complex-comparison
+
+Operator BETWEEN
+Use the BETWEEN operator to test whether a value lies between two boundary values.
+BETWEEN operator
+Read syntax diagramSkip visual syntax diagram
+expression
+NOT
+BETWEEN
+ASYMMETRIC
+SYMMETRIC
+endpoint_1
+AND
+endpoint_2
+
+
+Operator EXISTS
+EXISTS operator
+Read syntax diagramSkip visual syntax diagram
+Operand
+(
+ListExpression
+)
+The operator EXISTS returns a Boolean value that indicates whether a SELECT function returned one or more values (TRUE) or none (FALSE).
+EXISTS(SELECT * FROM something WHERE predicate)
+
+complex comparision operators
+
+https://www.ibm.com/docs/en/integration-bus/10.0?topic=operators-esql-complex-comparison
+
+BETWEEN
+IN
+LIKE
+
+
+We will see below operators  while working DB
+EXITS
+SINGULAR
+IS
+
+===============09-04-2021===========
+
+Rules for ESQL operator precedence
+CASE statement
+CREATE statement
+Task Link
+https://www.ibm.com/docs/en/integration-bus/10.0?topic=statements-create-statement
+
+
+==============14_04_2021=================
+INOUT parameter with example
+INOUT parmerter can be used to pass values to proc and to get result back in the same variable
+
+Calling Java method from ESQL
+
+
+
+
+How to create java project?
+First go to Java perspective-->Right click-->New-->java proj-->Give a name -->Finish
+proj wil be created next right click on src-->New package-->give com.test.concat-->finish
+package will be create next right click on package name-->New-->Class-->Give a name-->choose option public static void main checkbox-->Finish
+create a java method
+
+
+public static String concatMethod(String FName, String LName) {
+		return "Mr. " + FName + " " + LName;
+	}
+
+put below code in main method
+
+System.out.println(concatMethod("Naresh","N"));
+
+
+Right click-->Run as--> Java application	
+
+How to give java project ref to app?
+Right click on app -->properties-->Project References-->choose java project which you want to use -->click on OK 
+then java project will be added to your application.
+
+Rules:1
+The java method must be a static method
+Rules:2
+We can only pass charater data types values as IN parameter..If we try to use any other datatypes for example INTEGER in that case Application fails to Depoly
+
+
+================16_04_2021==============
+Json array
+
+{
+	"id": "100",
+	"id": "101",
+	"id": "102"
+} 
+
+the above way of representing id is wrong bcz we can't read second or third id values to over come this we need to use array
+
+Generating below json arrays in IIB esql
+Json Array format 1:
+
+["100", "101", "102"] -- we can't represent same in xml
+
+
+Json Array format 2:
+
+{
+	"EmployeeIds": ["100", "101", "102"]
+}
+
+--for above json arry equivalent xml array is 
+
+
+XML array:
+ 
+	 <EmployeeIds>
+		<Id>100</Id>
+		<Id>101</Id>
+		<Id>102</Id>
+	 </EmployeeIds>
+
+Json Array format 3:
+
+{
+	"Employees": [{
+		"Id": "100",
+		"name": "naresh",
+		"sal": "10000"
+	}, {
+		"Id": "102",
+		"name": "harish",
+		"sal": "20000"
+
+	},
+	{
+		"Id": "103",
+		"name": "Randeer",
+		"sal": "30000"
+
+	}]
+}
+
+Read above json array in IIB esql and Generating below json arrays in IIB esql
+
+When should we use FOR loop
+If incoming request is in ARRAY then to read those arrays we should use FOR Loop
+
+
+xml format for json format 3
+<Employees>
+   <EmpDetails>
+      <Id>100</Id>
+      <name>naresh</name>
+      <sal>10000</sal>
+   </EmpDetails>
+   <EmpDetails>
+      <Id>101</Id>
+      <name>harish</name>
+      <sal>20000</sal>
+   </EmpDetails>
+   <EmpDetails>
+      <Id>103</Id>
+      <name>Randeer</name>
+      <sal>30000</sal>
+   </EmpDetails>
+</Employees>
+
+
+===========19_04_2021==========================
+
+TOday we covered:
+Leave statement
+While loop
+
+================20_04_2021==============
+difference between while loop and repeat loop
+While:
+first checks if condition is TRUE if so it will go into the loop to execute set of statements
+Repeat:
+it will first goes into the loop and executes set of statements after that it checks (until condition) if the condition is  F
+ALSE then repeats the loop if the condition is TRUE then it terminates the loop
+
+In while loop or repeat loop don't forget to add set i=i+1 if you don't add this then your flow will go into infinity loop, then we can't stop or delete the applications 
+
+TOday we covered:
+Repeat
+Loop
+Postman
+Flow exerciser
+
+==============21_04_2021==============
+Today we covered string manipulation functions
+
+Application Name:StringManupulationFuncs_21_04_2021
+
+CONTAINS function
+ENDSWITH function
+LEFT function
+LENGTH function
+LOWER and LCASE functions
+LTRIM function
+OVERLAY function
+POSITION function
+REPLACE function
+REPLICATE function
+RIGHT function
+RTRIM function
+SPACE function
+STARTSWITH function
+SUBSTRING function
+TRANSLATE function
+TRIM function
+UPPER and UCASE 
+
+
+==============23_04_2021==============
+TOday we covered
+
+convertion of datetimes
+https://www.ibm.com/docs/en/integration-bus/9.0.0?topic=function-formatting-parsing-datetimes-as-strings
+
+==============24_04_2021==============
+
+If the input contains only date then,
+---------------------------------------
+If you want to perform any operations on date always first convert input date into Date datatype format
+
+{
+       "inputdate": "21/12/2021"
+}
+
+	DECLARE d DATE;
+	set d= CAST(InputRoot.JSON.Data.inputdate AS DATE FORMAT 'dd/MM/yyyy' );
+only after converting you can add dates,months,years and you can subtract days or months or years and you can Extract day,month,year
+
+If you want to convert date into or wish format use below line	
+		
+		
+	SET OutputRoot.JSON.Data.outputdate=CAST(d AS CHARACTER FORMAT 'MM.dd.yyyy');
+	
+If the input contains only timestamp then,
+---------------------------------------	
+{
+       "inputtimestamp": "21/12/2021 22:09:23"
+}
+DECLARE d TIMESTAMP;
+	set d= CAST(InputRoot.JSON.Data.inputtimestamp AS TIMESTAMP FORMAT 'dd/MM/yyyy HH:mm:ss' );
+only after converting you can add dates,months,years,Hours,mins,seconds and you can subtract days or months or years,Hours,mins,seconds and you can Extract day,month,year,Hours,mins,seconds
+
+If you want to convert date into or wish format use below line	
+		
+		
+	SET OutputRoot.JSON.Data.outputdate=CAST(d AS CHARACTER FORMAT 'MM.dd.yyyy HH:mm:ss');
+	
+If the input contains only time then,
+---------------------------------------	
+{
+       "inputtime": "22:09:23"
+}
+DECLARE d TIME;
+	set d= CAST(InputRoot.JSON.Data.inputtime AS TIME FORMAT 'HH:mm:ss' );
+only after converting you can add Hours,mins,seconds or can subtract Hours,mins,seconds can Extract Hours,mins,seconds
+
+If you want to convert date into or wish format use below line	
+		
+		
+	SET OutputRoot.JSON.Data.outputdate=CAST(d AS CHARACTER FORMAT 'MM.dd.yyyy HH:mm:ss');	
+	
+	
+===================25_04_2021==============
+Import concetp in IIB
+Database connectivity form IIB	
+MSSQL  installation
+
+===================26_04_2021==============
+Database connectivity form IIB	
+MSSQL  installations and connected to sql server through management studio and learnt basic queries.Check file SQLQuery1.sql
+DSN creation check file DSNCreation.doc
+
+===================27_04_2021==============
+
+How to insert registration form details in table through IIB
+
+Request:
+
+{
+	"RegistrationFormReq": {
+		"Name": "Naresh",
+		"MobileNumber": "9876543210",
+		"EmailId": "test@gmailcom",
+		"PanNumber": "QWER265",
+		"AdharNumber": "789478947894",
+		"Address": "Hyderabad"
+	}
+}
+
+
+Success Response:
+
+{
+	"RegistrationFormRes": {
+		"Status": "0",
+		"Message": "You have registered succesfully"
+
+	}
+}
+
+Failure response:
+{
+	"RegistrationFormRes": {
+		"Status": "1",
+		"Message": "Sorry!!! we are facing techinal error, please try later"
+
+	}
+}
+
+
+After registration update address based on pan
+
+
+{
+	"UpdateAddrReq": {		
+		"PanNumber": "QWER265",		
+		"Address": "Hyderabad"
+	}
+}
+
+Success Response:
+
+{
+	"UpdateAddrRes": {
+		"Status": "0",
+		"Message": "You have updated new address succesfully"
+
+	}
+}
+
+Failure response:
+{
+	"UpdateAddrRes": {
+		"Status": "1",
+		"Message": "Sorry!!! we are facing techinal error, please try later"
+
+	}
+}
+
+
+
+Now customer wants to delete or close account
+
+{
+	"CloseAccountReq": {		
+		"PanNumber": "QWER265"		
+		
+	}
+}
+
+Success Response:
+
+{
+	"CloseAccountRes": {
+		"Status": "0",
+		"Message": "You have closed your account succesfully"
+
+	}
+}
+
+Failure response:
+{
+	"CloseAccountRes": {
+		"Status": "1",
+		"Message": "Sorry!!! we are facing techinal error, please try later"
+
+	}
+}
+
+
+todays tasks
+1)creat database customer details table
+2)create DSN i will share document(setdbparms(to give username password to node),cvp(to verify db connection))-- 3times--DSN is only one time setup
+3)Import flows and soap project debug and check if values are inserting into Db or not
+4)create same applications --2 timestamp
+5)creat student details table
+=================28-04-2021======================
+esql list functions
+ Cardinality returns count of number of records present in table --It consumes memory and may effect on performance of the flow-- we can use this for arrays also
+ EXISTS checks if records present in table  or not --It returns TRUE if it talbe contains at least on record else returns false-- we can use this for arrays also
+ SINGULARITY returns TRUE if table contains only one record else returns false
+ THE function returns or only first record if there are multiple records in table 
+ 
+ Always try to use EXISTS function only where possible
+ 
+
+--SET INeedOneRecord.rec[]=THE(SELECT t.*   FROM CustomerDetails  AS t );--THE function picks only 1st record if there are multiple records in table	
+		--IF EXISTS(r.records[]) THEN-- EXISTS checks if records present or not
+		DECLARE count INTEGER CARDINALITY(r.records[]);
+		IF count>=1 THEN --CARDINALITY returns number of records present in table
+		
+Task:
+
+For todays application 
+customer details add a column in table
+json request add age 
+
+age beteen 18 and  100		
+insert 
+else 
+your not eligible 
+
+======01_05_2021=================
+
+create a proc with two inputs paramemters pan adhar
+
+ftech data based on pan and adhar 
+
+call this proc from esql 
+
+==================02_05_2021===============
+Task:
+
+Req:
+<Employees>
+   <EmpDetails>
+      <Id>100</Id>
+      <name>naresh</name>
+      <sal>10000</sal>
+   </EmpDetails>
+   <EmpDetails>
+      <Id>101</Id>
+      <name>harish</name>
+      <sal>20000</sal>
+   </EmpDetails>
+   <EmpDetails>
+      <Id>103</Id>
+      <name>Randeer</name>
+      <sal>30000</sal>
+   </EmpDetails>
+</Employees>
+
+Res:
+<Employees>
+  <msg>your details stored in DB</msg>
+</Employees>
+
+table name:EmpDetails
+col names:Id,name,sal
+insert
+
+==================03_05_2021=================
+Req:
+{
+	"RegistrationFormReq": {
+		"Name": "Randeer",
+		"MobileNumber": "",
+		"EmailId": "abcads@gmailcom",
+		"PanNumber": "7887QRF",
+		"AdharNumber": "7478 9478 94",
+		"Address": "delhi"
+	}
+}
+
+MobileNumber length 10
+EmailId @ symbol
+AdharNumber length 12
+
+while inserting into db remove spaces
+
+
+error :you have provided invalid
+
+===========04_05_2021============
+
+http://18.218.159.243
+<AdharReq><adhar>111122223333</adhar></AdharReq>
+
+http://18.218.159.243:49159/panservice
+
+
+===========06_05_2021============================
+
+To we have covered real environment process(See paint image)
+
+How to create bar file
+right click on application-->new-->bar-->give same name as application name-->finish-->choose application-->build and save
+we can see bar file under BAR folder section-->right click on it -->properties-->here  we can see location of bar file where it has been created.
+
+few commands to deploy our bar file in command line
+-->mqsilist to list all nodes and egs
+-->mqsilist nodename  -->to display egs present in that node
+-->mqsideploy nodename -e egname -a completebarfilepath with .bar extensio
+
+
+web user interface(righ click on node and choose start webuser interface), how to deploy
+please deploy ThirdPartyorEXTERNALAPIcall.bar in tes1 node,default eg in QA server IP 
+
+
+To find node port number:
+
+mqsireportproperties test1 -b httplistener -o HTTPConnector -r
+
+
+To find Eg port number:
+mqsireportproperties test1 -e default -o HTTPConnector -r
+
+===========07_05_2021========
+Today we learned how to genenrate property file
+
+Property file is a normal text file which contains  properties of each node
+For each environment we will generate a property file like 
+applicationname_QA.properties
+applicationname_UAT.properties
+applicationname_PROD.properties
+
+command to genenrate  a property file from bar file
+mqsireadbar -b completebarfilePathwithbarFilename -r > LocationInwhichyouWantTOStore
+
+ex:
+mqsireadbar -b C:\Users\haris\IBM\IIBT10\workspace\BARfiles\ThirdPartyOrExternalAPICall_04_05_2021.bar -r > C:\Users\haris\IBM\IIBT10\workspace\BARfiles\ThirdPartyOrExternalAPICall_04_05_2021_QA.properties
+
+commad to see bar file properties in console :
+
+mqsireadbar -b C:\Users\haris\IBM\IIBT10\workspace\BARfiles\ThirdPartyOrExternalAPICall_04_05_2021.bar -r
+
+next open property file in note pad++ 
+Two delete unnecessary properties use below procedure:
+Ctrl+F-->Mark-->type = in serach box-->mark all-->close
+serach-->Boookmarklines-->copybookmarklines
+delete entire data in file and paste it
+now we will see only the properties which are useful to us
+
+Now use below command to apply property file new changes to bar file
+mqsiapplybaroverride -b C:\Users\haris\IBM\IIBT10\workspace\BARfiles\ThirdPartyOrExternalAPICall_04_05_2021.bar -p C:\Users\haris\IBM\IIBT10\workspace\BARfiles\ThirdPartyOrExternalAPICall_04_05_2021_QA.properties -r 
+
+now deploy bar file using mqsideploy command
+
